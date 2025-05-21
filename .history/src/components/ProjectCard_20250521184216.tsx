@@ -22,43 +22,39 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, featured = false }) 
     'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7'
   ];
 
-  const imagensManuais = {
-    "prj_buli1iE1KRigxkza0rJDjiOqPFaw": "/imgdashbord.png",
-    "prj_ZAvdhlgQcbjFwimLdKB6PVGIrI6b": "/imggestoreventos.png",
-    "prj_452tuaXAnmwzZIO8FBailktjR66j": "/imgquadrotarefas.png",
-    "prj_0aQfXZx5UjyqnHBEy1ZEOLjjlAFD": "/neuronai.png",
-    "prj_bUEhDGnaC5k0Lz36KtwUkuy0Ai5P": "/capputeeno.png",
-    "prj_rDnItujZWHUj5sgbPmWTuVBKIhDc": "/peetdev.png",
-    "prj_ArKgGiYMCk78zaazxU0gDtgHlzeU": "/ebacjobs.png",
-    "prj_XNhgBEj0dc0O8JtRJMLnDp8n1Pep": "/todo-list-basic.png",
-    "prj_5Wabsb096RY1p3UpyYcSd5JGmvd0": "/vuecalculater.png",
-    "prj_F8Z2Vs31TQ6a4G4PYTUTYfi47WHh": "/niver.png",
-    "prj_FppfsdFZCxTDiZmVlzWETuWZ9Wg5": "/devoltafuturo.png",
-    "prj_7JLQE92NccCjLHyTbEu4147BNxyq": "/eventebac.png",
-    "prj_DZBGgFkUFFYNnqecxsqfCk6lmk7T": "/clonedisney.png",
-    "prj_EsMKxYAalTW5XyPri7OQETyzLhfM": "/sorteador.png",
-    "prj_Or1z9S74pwTpg3C8kIBnwRAikJxQ": "/culinariadigital.png",
-    "prj_d0LzaenxgPwMImgOX7WQkdtTCClS": "/restaurante.png",
-    "prj_XSwDIfMsfWThImUgKux34jl9yC4Z": "/tarefaboot.png",
-    "prj_yiCG7LbVGnpAzsoKkoVj2J2SDEw1": "/cssresponsivo.png",
-  };
-
   // Select a fallback image based on project ID (for consistency)
   const imageIndex = parseInt(project.id.replace(/\D/g, '0'), 10) % fallbackImages.length;
+  const projectImage = project.imageUrl || fallbackImages[imageIndex];
 
-  // Prioriza imagem manual, depois a do projeto, depois fallback
-  const projectImage = imagensManuais[project.id] || project.imageUrl || fallbackImages[imageIndex];
+    const imagensManuais = {
+    "prj_buli1iE1KRigxkza0rJDjiOqPFaw": "/imgdashbord.png",
+    "id-do-projeto-2": "/imagens/meu-projeto-2.png",
+    "id-do-projeto-3": "/imagens/meu-projeto-2.png",
+    "id-do-projeto-4": "/imagens/meu-projeto-2.png",
+    "id-do-projeto-5": "/imagens/meu-projeto-2.png",
+    "id-do-projeto-6": "/imagens/meu-projeto-2.png",
+    "id-do-projeto-7": "/imagens/meu-projeto-2.png",
+    "id-do-projeto-8": "/imagens/meu-projeto-2.png",
+    "id-do-projeto-9": "/imagens/meu-projeto-2.png",
+    "id-do-projeto-10": "/imagens/meu-projeto-2.png",
+    "id-do-projeto-11": "/imagens/meu-projeto-2.png",
+    "id-do-projeto-12": "/imagens/meu-projeto-2.png",
+    "id-do-projeto-13": "/imagens/meu-projeto-2.png",
+    "id-do-projeto-14": "/imagens/meu-projeto-2.png",
+    "id-do-projeto-15": "/imagens/meu-projeto-2.png",
+  
+  };
 
   return (
     <Card className={`overflow-hidden flex flex-col bg-white border-white text-black hover:border-primary transition-all duration-300 border-l-4 border-l-[#d1d1d1]`}>
       <div className="h-52 overflow-hidden">
-        <img
-          src={projectImage}
-          alt={project.name}
-          className="w-full h-full object-cover transition-transform hover:scale-105"
+        <img 
+          src={projectImage} 
+          alt={project.name} 
+          className="w-full h-full object-cover transition-transform hover:scale-105" 
         />
       </div>
-
+      
       <CardHeader className="pb-2">
         <div className="flex items-center justify-between">
           <CardTitle className="text-xl font-bold">{project.name}</CardTitle>
@@ -69,7 +65,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, featured = false }) 
         </div>
         <CardDescription className="line-clamp-2 text-black">{project.description}</CardDescription>
       </CardHeader>
-
+      
       <CardContent className="flex-grow">
         <div className="flex flex-wrap gap-2 mb-4">
           {project.technologies && project.technologies.map((tech, index) => (
@@ -78,17 +74,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, featured = false }) 
             </Badge>
           ))}
         </div>
-
+        
         {project.deployedAt && (
           <p className="text-xs text-gray-400 mb-2">
             Atualizado em {new Date(project.deployedAt).toLocaleDateString('pt-BR')}
           </p>
         )}
       </CardContent>
-
+      
       <CardFooter className="flex gap-2 pt-0">
-        <Button
-          variant="outline"
+        <Button 
+          variant="outline" 
           className="w-1/2 justify-between group border-slate-700 bg-slate-800 hover:bg-slate-700 text-white"
           asChild
         >
@@ -97,10 +93,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, featured = false }) 
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </Button>
-
+        
         {project.deployUrl && (
-          <Button
-            variant="secondary"
+          <Button 
+            variant="secondary" 
             className="w-1/2 justify-between group bg-primary hover:bg-primary/80 text-white"
             asChild
           >

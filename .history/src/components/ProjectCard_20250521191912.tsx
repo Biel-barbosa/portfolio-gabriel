@@ -28,7 +28,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, featured = false }) 
     "prj_452tuaXAnmwzZIO8FBailktjR66j": "/imgquadrotarefas.png",
     "prj_0aQfXZx5UjyqnHBEy1ZEOLjjlAFD": "/neuronai.png",
     "prj_bUEhDGnaC5k0Lz36KtwUkuy0Ai5P": "/capputeeno.png",
-    "prj_rDnItujZWHUj5sgbPmWTuVBKIhDc": "/peetdev.png",
+    "prj_rDnItujZWHUj5sgbPmWTuVBKIhDc": "/petdev.png",
     "prj_ArKgGiYMCk78zaazxU0gDtgHlzeU": "/ebacjobs.png",
     "prj_XNhgBEj0dc0O8JtRJMLnDp8n1Pep": "/todo-list-basic.png",
     "prj_5Wabsb096RY1p3UpyYcSd5JGmvd0": "/vuecalculater.png",
@@ -36,11 +36,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, featured = false }) 
     "prj_FppfsdFZCxTDiZmVlzWETuWZ9Wg5": "/devoltafuturo.png",
     "prj_7JLQE92NccCjLHyTbEu4147BNxyq": "/eventebac.png",
     "prj_DZBGgFkUFFYNnqecxsqfCk6lmk7T": "/clonedisney.png",
-    "prj_EsMKxYAalTW5XyPri7OQETyzLhfM": "/sorteador.png",
-    "prj_Or1z9S74pwTpg3C8kIBnwRAikJxQ": "/culinariadigital.png",
-    "prj_d0LzaenxgPwMImgOX7WQkdtTCClS": "/restaurante.png",
-    "prj_XSwDIfMsfWThImUgKux34jl9yC4Z": "/tarefaboot.png",
-    "prj_yiCG7LbVGnpAzsoKkoVj2J2SDEw1": "/cssresponsivo.png",
+    "id-do-projeto-14": "/imagens/meu-projeto-2.png",
+    "id-do-projeto-15": "/imagens/meu-projeto-2.png",
+
   };
 
   // Select a fallback image based on project ID (for consistency)

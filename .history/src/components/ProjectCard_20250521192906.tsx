@@ -28,7 +28,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, featured = false }) 
     "prj_452tuaXAnmwzZIO8FBailktjR66j": "/imgquadrotarefas.png",
     "prj_0aQfXZx5UjyqnHBEy1ZEOLjjlAFD": "/neuronai.png",
     "prj_bUEhDGnaC5k0Lz36KtwUkuy0Ai5P": "/capputeeno.png",
-    "prj_rDnItujZWHUj5sgbPmWTuVBKIhDc": "/peetdev.png",
+    "prj_rDnItujZWHUj5sgbPmWTuVBKIhDc": "/petdev.png",
     "prj_ArKgGiYMCk78zaazxU0gDtgHlzeU": "/ebacjobs.png",
     "prj_XNhgBEj0dc0O8JtRJMLnDp8n1Pep": "/todo-list-basic.png",
     "prj_5Wabsb096RY1p3UpyYcSd5JGmvd0": "/vuecalculater.png",
