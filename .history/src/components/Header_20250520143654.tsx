@@ -42,7 +42,7 @@ const Header = () => {
       {/* Mobile Navigation */}
       <div 
         className={cn(
-          "fixed inset-0 top-[60px] bg-slate-900/95 backdrop-blur-md z-40 flex flex-col items-center h-[200px] pt-8 md:hidden",
+          "fixed inset-0 top-[60px] bg-slate-900/95 backdrop-blur-md z-40 flex flex-col items-center pt-8 md:hidden",
           isMenuOpen ? "animate-fade-in" : "hidden"
         )}
       >
