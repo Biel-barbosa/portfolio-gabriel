@@ -23,7 +23,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, featured = false }) 
   ];
 
   const imagensManuais = {
-    "prj_Pr0xZXwfAseszat24qJTXfaJSCDy": "/imgportfolio.png",
     "prj_buli1iE1KRigxkza0rJDjiOqPFaw": "/imgdashbord.png",
     "prj_ZAvdhlgQcbjFwimLdKB6PVGIrI6b": "/imggestoreventos.png",
     "prj_452tuaXAnmwzZIO8FBailktjR66j": "/imgquadrotarefas.png",
@@ -45,7 +44,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, featured = false }) 
   };
 
   const urlsManuais: Record<string, string> = {
-    "prj_Pr0xZXwfAseszat24qJTXfaJSCDy": "https://portfolio-gabriel-nu.vercel.app/",
     "prj_buli1iE1KRigxkza0rJDjiOqPFaw": "https://dashbord-analytics.vercel.app/",
     "prj_ZAvdhlgQcbjFwimLdKB6PVGIrI6b": "https://gestor-eventos-kappa.vercel.app/",
     "prj_452tuaXAnmwzZIO8FBailktjR66j": "https://gerenciador-tarefas-kanban.vercel.app/",

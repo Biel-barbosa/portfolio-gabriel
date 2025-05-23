@@ -23,7 +23,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, featured = false }) 
   ];
 
   const imagensManuais = {
-    "prj_Pr0xZXwfAseszat24qJTXfaJSCDy": "/imgportfolio.png",
     "prj_buli1iE1KRigxkza0rJDjiOqPFaw": "/imgdashbord.png",
     "prj_ZAvdhlgQcbjFwimLdKB6PVGIrI6b": "/imggestoreventos.png",
     "prj_452tuaXAnmwzZIO8FBailktjR66j": "/imgquadrotarefas.png",
@@ -45,25 +44,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, featured = false }) 
   };
 
   const urlsManuais: Record<string, string> = {
-    "prj_Pr0xZXwfAseszat24qJTXfaJSCDy": "https://portfolio-gabriel-nu.vercel.app/",
     "prj_buli1iE1KRigxkza0rJDjiOqPFaw": "https://dashbord-analytics.vercel.app/",
     "prj_ZAvdhlgQcbjFwimLdKB6PVGIrI6b": "https://gestor-eventos-kappa.vercel.app/",
     "prj_452tuaXAnmwzZIO8FBailktjR66j": "https://gerenciador-tarefas-kanban.vercel.app/",
-    "prj_0aQfXZx5UjyqnHBEy1ZEOLjjlAFD": "https://aurora-tech-landingpage.vercel.app/",
-    "prj_bUEhDGnaC5k0Lz36KtwUkuy0Ai5P": "https://capputeenoecomerce.vercel.app/",
-    "prj_rDnItujZWHUj5sgbPmWTuVBKIhDc": "https://petdev-pink.vercel.app/",
-    "prj_ArKgGiYMCk78zaazxU0gDtgHlzeU": "https://base-exercicio-css-in-js-ashy.vercel.app/",
-    "prj_XNhgBEj0dc0O8JtRJMLnDp8n1Pep": "https://todo-list-vuejs-nine.vercel.app/",
-    "prj_5Wabsb096RY1p3UpyYcSd5JGmvd0": "https://exercicio-calculadora.vercel.app/",
-    "prj_F8Z2Vs31TQ6a4G4PYTUTYfi47WHh": "https://exercicio-aniversario-psi.vercel.app/",
-    "prj_FppfsdFZCxTDiZmVlzWETuWZ9Wg5": "https://exercicio-meu-filme-favorito.vercel.app/",
-    "prj_7JLQE92NccCjLHyTbEu4147BNxyq": "https://ebac-tech-talks-two-lake.vercel.app/",
-    "prj_DZBGgFkUFFYNnqecxsqfCk6lmk7T": "https://clone-disneyplus-xi-nine.vercel.app/",
-    "prj_EsMKxYAalTW5XyPri7OQETyzLhfM": "https://sorteador-grunt-iota-inky.vercel.app/",
-    "prj_Or1z9S74pwTpg3C8kIBnwRAikJxQ": "https://projeto-culinaria-digital.vercel.app/",
-    "prj_d0LzaenxgPwMImgOX7WQkdtTCClS": "https://projeto-3-ebac-xi.vercel.app/",
-    "prj_XSwDIfMsfWThImUgKux34jl9yC4Z": "https://tarefa-bootstrap-ebac.vercel.app/",
-    "prj_yiCG7LbVGnpAzsoKkoVj2J2SDEw1": "https://praticando-css-responsivo-ebac-shoes.vercel.app/",
+    // ...continue para os outros
   };
 
   // Select a fallback image based on project ID (for consistency)
