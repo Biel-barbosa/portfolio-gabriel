@@ -44,9 +44,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, featured = false }) 
   };
 
   const urlsManuais: Record<string, string> = {
-    "prj_buli1iE1KRigxkza0rJDjiOqPFaw": "https://dashbord-analytics-nd7c08dq6-gabriels-projects-16db9a64.vercel.app/",
-    "prj_ZAvdhlgQcbjFwimLdKB6PVGIrI6b": "https://gestor-eventos-kappa.vercel.app/",
-    "prj_452tuaXAnmwzZIO8FBailktjR66j": "https://gerenciador-tarefas-kanban.vercel.app/",
+    "prj_buli1iE1KRigxkza0rJDjiOqPFaw": "https://dashboard.vercel.app",
+    "prj_ZAvdhlgQcbjFwimLdKB6PVGIrI6b": "https://gestor-eventos.vercel.app",
+    "prj_452tuaXAnmwzZIO8FBailktjR66j": "https://kanban-tarefas.vercel.app",
     // ...continue para os outros
   };
 
