@@ -39,10 +39,10 @@ export const featuredProjects: Project[] = [
 const getTechnologiesForProject = (project: VercelProject) => {
   const name = project.name.toLowerCase();
   const framework = project.framework?.toLowerCase() || '';
-
+  
   // Base technologies based on the Vercel framework
   const baseTechs = [];
-
+  
   if (framework.includes('next')) {
     baseTechs.push('Next.js', 'React');
   } else if (framework.includes('react')) {
@@ -56,7 +56,7 @@ const getTechnologiesForProject = (project: VercelProject) => {
   } else {
     baseTechs.push('JavaScript');
   }
-
+  
   // Add additional technologies based on project name
   if (name.includes('dashboard') || name.includes('admin')) {
     baseTechs.push('ChartJS', 'Tailwind CSS', 'ShadcnUI');
@@ -73,14 +73,14 @@ const getTechnologiesForProject = (project: VercelProject) => {
   } else {
     baseTechs.push('Tailwind CSS', 'TypeScript');
   }
-
+  
   return [...new Set(baseTechs)]; // Remove duplicates
 };
 
 // Função para criar uma descrição melhor para os projetos da Vercel
 const generateProjectDescription = (project: VercelProject) => {
   const name = project.name.toLowerCase();
-
+  
   if (name.includes('dashboard')) {
     return `Painel administrativo ${project.name} desenvolvido com ${project.framework || 'tecnologias modernas'} para visualização de dados e gerenciamento de recursos. Inclui gráficos interativos, tabelas dinâmicas e controle de acesso.`;
   } else if (name.includes('ecommerce') || name.includes('loja')) {
@@ -103,21 +103,21 @@ export const fetchVercelProjects = async (): Promise<Project[]> => {
   try {
     // Buscar projetos da Vercel utilizando nossa função de API
     const data = await fetchVercelProjectsApi();
-
+    
     // Converter os dados da API da Vercel para o formato do nosso app
     const projects: Project[] = data.map((project: VercelProject) => {
       // Pegar o último deploy, se existir
       const latestDeployment = project.latestDeployments && project.latestDeployments.length > 0
         ? project.latestDeployments[0]
         : null;
-
+      
       const technologies = getTechnologiesForProject(project);
       const description = generateProjectDescription(project);
-
+      
       // Selecionar uma imagem baseada no nome do projeto
       let imageUrl;
       const projectName = project.name.toLowerCase();
-
+      
       if (projectName.includes('dashboard')) {
         imageUrl = 'https://images.unsplash.com/photo-1531297484001-80022131f5a1';
       } else if (projectName.includes('ecommerce')) {
@@ -133,7 +133,7 @@ export const fetchVercelProjects = async (): Promise<Project[]> => {
       } else {
         imageUrl = 'https://images.unsplash.com/photo-1498050108023-c5249f4df085';
       }
-
+      
       return {
         id: project.id,
         name: project.name,
@@ -148,7 +148,7 @@ export const fetchVercelProjects = async (): Promise<Project[]> => {
         source: 'vercel'
       };
     });
-
+    
     return [...projects, ...featuredProjects];
   } catch (error) {
     console.error('Erro ao buscar projetos:', error);
@@ -164,7 +164,7 @@ export const getProjectById = async (id: string): Promise<Project | null> => {
     // Como estamos usando dados mockados, vamos filtrar do array
     const allProjects = await fetchVercelProjects();
     const project = allProjects.find(p => p.id === id);
-
+    
     return project || null;
   } catch (error) {
     console.error('Erro ao buscar projeto por ID:', error);

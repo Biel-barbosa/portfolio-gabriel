@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Project } from '../types';
@@ -46,26 +47,25 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, featured = false }) 
 
   // URLs manuais mapeadas por ID do projeto
   const urlsManuais: Record<string, string> = {
-    "prj_x3tH0lEdBLADpisfA7vr6atNTnwJ": "https://v0-react-contact-list-sigma.vercel.app",
-    "prj_Pr0xZXwfAseszat24qJTXfaJSCDy": "https://portfolio-gabriel-nu.vercel.app",
-    "prj_buli1iE1KRigxkza0rJDjiOqPFaw": "https://dashbord-analytics.vercel.app",
-    "prj_ZAvdhlgQcbjFwimLdKB6PVGIrI6b": "https://gestor-eventos.vercel.app",
-    "prj_452tuaXAnmwzZIO8FBailktjR66j": "https://gerenciador-tarefas.vercel.app",
-    "prj_0aQfXZx5UjyqnHBEy1ZEOLjjlAFD": "https://aurora-tech.vercel.app",
-    "prj_bUEhDGnaC5k0Lz36KtwUkuy0Ai5P": "https://capputeeno.vercel.app",
-    "prj_rDnItujZWHUj5sgbPmWTuVBKIhDc": "https://petdev.vercel.app",
-    "prj_ArKgGiYMCk78zaazxU0gDtgHlzeU": "https://base-exercicio-css.vercel.app",
-    "prj_XNhgBEj0dc0O8JtRJMLnDp8n1Pep": "https://todo-list-vuejs.vercel.app",
-    "prj_5Wabsb096RY1p3UpyYcSd5JGmvd0": "https://calculadora.vercel.app",
-    "prj_F8Z2Vs31TQ6a4G4PYTUTYfi47WHh": "https://aniversario.vercel.app",
-    "prj_FppfsdFZCxTDiZmVlzWETuWZ9Wg5": "https://meu-filme-favorito.vercel.app",
-    "prj_7JLQE92NccCjLHyTbEu4147BNxyq": "https://ebac-tech-talks.vercel.app",
-    "prj_DZBGgFkUFFYNnqecxsqfCk6lmk7T": "https://clone-disneyplus.vercel.app",
-    "prj_EsMKxYAalTW5XyPri7OQETyzLhfM": "https://sorteador.vercel.app",
-    "prj_Or1z9S74pwTpg3C8kIBnwRAikJxQ": "https://culinaria-digital.vercel.app",
-    "prj_d0LzaenxgPwMImgOX7WQkdtTCClS": "https://projeto-3-ebac.vercel.app",
-    "prj_XSwDIfMsfWThImUgKux34jl9yC4Z": "https://tarefa-bootstrap.vercel.app",
-    "prj_yiCG7LbVGnpAzsoKkoVj2J2SDEw1": "https://css-responsivo.vercel.app",
+    "prj_Pr0xZXwfAseszat24qJTXfaJSCDy": "https://portfolio-gabriel-nu.vercel.app/",
+    "prj_buli1iE1KRigxkza0rJDjiOqPFaw": "https://dashbord-analytics.vercel.app/",
+    "prj_ZAvdhlgQcbjFwimLdKB6PVGIrI6b": "https://gestor-eventos-kappa.vercel.app/",
+    "prj_452tuaXAnmwzZIO8FBailktjR66j": "https://gerenciador-tarefas-kanban.vercel.app/",
+    "prj_0aQfXZx5UjyqnHBEy1ZEOLjjlAFD": "https://aurora-tech-landingpage.vercel.app/",
+    "prj_bUEhDGnaC5k0Lz36KtwUkuy0Ai5P": "https://capputeenoecomerce.vercel.app/",
+    "prj_rDnItujZWHUj5sgbPmWTuVBKIhDc": "https://petdev-pink.vercel.app/",
+    "prj_ArKgGiYMCk78zaazxU0gDtgHlzeU": "https://base-exercicio-css-in-js-ashy.vercel.app/",
+    "prj_XNhgBEj0dc0O8JtRJMLnDp8n1Pep": "https://todo-list-vuejs-nine.vercel.app/",
+    "prj_5Wabsb096RY1p3UpyYcSd5JGmvd0": "https://exercicio-calculadora.vercel.app/",
+    "prj_F8Z2Vs31TQ6a4G4PYTUTYfi47WHh": "https://exercicio-aniversario-psi.vercel.app/",
+    "prj_FppfsdFZCxTDiZmVlzWETuWZ9Wg5": "https://exercicio-meu-filme-favorito.vercel.app/",
+    "prj_7JLQE92NccCjLHyTbEu4147BNxyq": "https://ebac-tech-talks-two-lake.vercel.app/",
+    "prj_DZBGgFkUFFYNnqecxsqfCk6lmk7T": "https://clone-disneyplus-xi-nine.vercel.app/",
+    "prj_EsMKxYAalTW5XyPri7OQETyzLhfM": "https://sorteador-grunt-iota-inky.vercel.app/",
+    "prj_Or1z9S74pwTpg3C8kIBnwRAikJxQ": "https://projeto-culinaria-digital.vercel.app/",
+    "prj_d0LzaenxgPwMImgOX7WQkdtTCClS": "https://projeto-3-ebac-xi.vercel.app/",
+    "prj_XSwDIfMsfWThImUgKux34jl9yC4Z": "https://tarefa-bootstrap-ebac.vercel.app/",
+    "prj_yiCG7LbVGnpAzsoKkoVj2J2SDEw1": "https://praticando-css-responsivo-ebac-shoes.vercel.app/",
   };
 
   // Índice para fallback consistente baseado no ID do projeto
@@ -75,8 +75,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, featured = false }) 
   const projectImage = imagensManuais[project.id]
     ? imagensManuais[project.id]
     : project.imageUrl
-      ? project.imageUrl
-      : fallbackImages[imageIndex];
+    ? project.imageUrl
+    : fallbackImages[imageIndex];
 
   // Prioriza URL manual, depois a URL automática do projeto
   const projectUrl = urlsManuais[project.id] ? urlsManuais[project.id] : project.deployUrl;

@@ -46,7 +46,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, featured = false }) 
 
   // URLs manuais mapeadas por ID do projeto
   const urlsManuais: Record<string, string> = {
-    "prj_x3tH0lEdBLADpisfA7vr6atNTnwJ": "https://v0-react-contact-list-sigma.vercel.app",
     "prj_Pr0xZXwfAseszat24qJTXfaJSCDy": "https://portfolio-gabriel-nu.vercel.app",
     "prj_buli1iE1KRigxkza0rJDjiOqPFaw": "https://dashbord-analytics.vercel.app",
     "prj_ZAvdhlgQcbjFwimLdKB6PVGIrI6b": "https://gestor-eventos.vercel.app",
